@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Encuestas.EncuestasDetailView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nueva encuesta" FontSize="30" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+            <StackLayout>
+                
+                <Label Text="Nombre:"></Label>
+                <Entry Placeholder="Escribí tu nombre:" x:Name="EntryNombre"></Entry>
+
+                <Label Text="Fecha de nacimiento:"></Label>
+                <DatePicker x:Name="DatePickerCumpleaños"></DatePicker>
+
+                <Label Text="Equipo favorito:"></Label>
+                <Grid>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".7*"></ColumnDefinition>
+                        <ColumnDefinition Width=".3*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label  Text="Seleccioná tu equipo =>" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="LblEquipoFavorito"></Label>
+                    <Button Grid.Column="1" Text="..." Clicked="BtnEquipoFavorito"></Button>
+                    
+                </Grid>
+                
+                <Button Text="Aceptar" Clicked="BtnAceptarEncuesta"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
